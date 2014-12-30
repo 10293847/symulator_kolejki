@@ -307,9 +307,11 @@ void Kolejka::statystyki()
 
     cout << "lacznie pojawilo sie: " << ile_klientow << "\n\n";
 
-    cout << "zadowoleni klienci: " << ile_klientow_ok << "\n\n";
+    cout << "zadowoleni klienci: " << (ile_klientow_ok - stan_kolejki) << "\n\n";
 
-    cout << "klienci, ktorzy odeszli bedac w kolejce: " << zniecierpliwieni << "\n\n";
+    cout << "klienci, ktorzy odeszli bedac w kolejce: " << (zniecierpliwieni + stan_kolejki)<< "\n\n";
+
+    cout << "w momencie wyłączenia bankomatu było: " << stan_kolejki << "  klientów\n\n";
 
     cout << "laczny czas obslugi: " << laczny_czas_obslugi << "\n\n";
 }
